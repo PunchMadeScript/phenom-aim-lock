@@ -1,0 +1,4 @@
+local h = game:service('Players').LocalPlayer.Character.Humanoid
+h:GetPropertyChangedSignal('PlatformStand'):Connect(function(ewo)
+h.PlatformStand = false
+end)
