@@ -1,0 +1,78 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Check if Rayfield is loaded correctly
+if not Rayfield then
+    warn("Failed to load Rayfield library")
+    return
+end
+
+local Window = Rayfield:CreateWindow({
+    Name = "Vision Hub",
+    LoadingTitle = "Vision Script",
+    LoadingSubtitle = "by Vision",
+    ConfigurationSaving = {
+       Enabled = false,
+       FileName = "Vision Script Hub"
+    },
+    Discord = {
+       Enabled = true,
+       Invite = "GYH92be25Z",
+       RememberJoins = true
+    },
+    KeySystem = true,
+    KeySettings = {
+       Title = "Vision Script Hub| Key",
+       Subtitle = "Link In Discord Server",
+       Note = "Join Server From Misc Tab",
+       FileName = "BladeBallKey",
+       SaveKey = false,
+       GrabKeyFromSite = true,
+       Key = {"https://pastebin.com/raw/KT2YvsJ8"}
+    }
+})
+
+if not Window then
+    warn("Failed to create window. Please check the Rayfield library or script parameters.")
+    return
+end
+
+local AimbotTab = Window:CreateTab("Aimbot", nil) -- Title, Image
+local AimbotSection = AimbotTab:CreateSection("Aimbots") -- Changed 'Tab' to 'MainTab'
+
+local Button = AimbotTab:CreateButton({
+   Name = "3rd Person Aimlock",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PunchMadeScript/phenom-aim-lock/refs/heads/main/phenom"))();
+   end,
+})
+
+local Button = AimbotTab:CreateButton({
+   Name = "Silent Aim (X)",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/6ce/Roblox-Phenom-Silent-Aims/refs/heads/main/NormalAimbot.lua"))();
+   end,
+})
+
+local UsefulTab = Window:CreateTab("Useful", nil) -- Title, Image
+local UsefulSection = UsefulTab:CreateSection("Player") -- Changed 'Tab' to 'MainTab'
+
+local Button = UsefulTab:CreateButton({
+   Name = "Headride ( no ankle breaker )",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PunchMadeScript/phenom-aim-lock/refs/heads/main/head%20ride"))();
+   end,
+})
+
+local Button = UsefulTab:CreateButton({
+   Name = "No Steal (B)",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PunchMadeScript/phenom-aim-lock/refs/heads/main/no%20steal"))();
+   end,
+})
+
+local Button = UsefulTab:CreateButton({
+   Name = "Keyboard",
+   Callback = function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/RedZenXYZ/4d80bfd70ee27000660e4bfa7509c667/raw/da903c570249ab3c0c1a74f3467260972c3d87e6/KeyBoard%2520From%2520Ohio%2520Fr%2520Fr"))()
+   end,
+})
