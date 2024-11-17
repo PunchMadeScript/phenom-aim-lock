@@ -1,0 +1,6 @@
+local u = game:service('UserInputService')
+u.InputBegan:connect(function(a,l)
+if a.KeyCode == Enum.KeyCode.B and not l then
+game:service('Players').LocalPlayer.Character.Basketball.ToolTip:Destroy()
+end
+end)
